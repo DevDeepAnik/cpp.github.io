@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>C++ Code ST1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #0066cc;
+            margin-top: 0;
+        }
+
+        .code-box {
+            width: 100%;
+            height: 200px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            font-size: 14px;
+            resize: vertical;
+        }
+
+        button {
+            display: block;
+            margin: 0 auto;
+            background-color: #0066cc;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+        button:hover {
+            background-color: #004080;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>C++ Code ST1</h1>
+        <p>Enter your C++ code below:</p>
+        <textarea class="code-box" id="cpp-code" rows="10" cols="30">
+#swap two variables
+#include <stdio.h>
+/* Include other headers as needed */
+int main()
+{
+    int a,b;
+   scanf("%d %d",&a,&b);
+   a=a+b;
+   b=a-b;
+   a=a-b;
+   printf("%d\n%d",a,b);
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+    return 0;
+}
+#swap two variables without using a third variable
+#include <stdio.h>
+/* Include other headers as needed */
+int main()
+{ 
+  int a,b;
+  scanf("%d %d",&a,&b);
+  a=a+b;
+  b=a-b;
+  a=a-b;
+  printf("%d\n%d",a,b);
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+    return 0;
+}
+#sum of all the digits of a number
+include <stdio.h>
+/* Include other headers as needed */
+int main()
+{ 
+  int n,N,i,a;
+  scanf("%d",&N);
+  for(i=0;i<N;i++){
+    scanf("%d",&n);
+    int sum=0;
+    while(n!=0){
+      a=n%10;
+      n=n/10;
+      sum=sum+a;
+    }
+    printf("%d\n",sum);
+  }
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+    return 0;
+}
+#Form a number
+include <stdio.h>
+int main(){
+  int a,n,num=0;
+  scanf("%d",&a);
+  for(int i=1;i<=a;i++){
+    scanf("%d",&n);
+          num=num*10+n;
+  }
+     printf("%d",num);     
+  // Write your code here
+  return 0;
+}
+#compare reverse and original number
+#include <stdio.h>
+/* Include other headers as needed */
+int main()
+{
+  int a,b,n;
+  scanf("%d",&n);
+  for(int i=1;i<=n;i++){
+    scanf("%d",&a);
+    int abc=a;
+    int rev=0;
+    while(a>0){
+      b=a%10;
+      rev=rev*10+b;
+      a=a/10;
+    }
+    if(abc==rev){
+      printf("Equal\n");
+    }
+    else {
+      printf("Not Equal\n");
+    }
+  }
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+    return 0;
+}
+#sum of a set of numbers
+[08/04, 9:21 pm] Prateek Singh: #include <stdio.h>
+/* Include other headers as needed */
+int main()
+{
+    int a,n,sum=0;
+    scanf("%d",&a);
+  for(int i=1;i<=a;i++){
+    scanf("%d\n",&n);
+    sum+=n;
+  }
+  printf("%d",sum);
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+    return 0;
+}
+[08/04, 9:22 pm] Prateek Singh: ##Counting
+[08/04, 9:22 pm] Prateek Singh: #include <stdio.h>
+/* Include other headers as needed */
+int main()
+{
+   int a,b,count=0;
+  scanf("%d",&a);
+  for(int i=1;i<=a;i++){
+    scanf("%d",&b);
+    if(b>=50){
+      count++;
+    }
+    else
+      continue;
+  }
+  printf("%d",count);
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+    return 0;
+}
+#Generate prime numbers
+include <stdio.h>
+/* Include other headers as needed */
+int main()
+{
+  int a;
+  scanf("%d",&a);
+  for(int i=2;i<=a;i++){
+    for(int j=2;j<=i;j++){
+      if(i==j){
+        printf("%d\n",i);
+      }
+      if(i%j==0){
+        break;
+      }
+    }
+  }
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+    return 0;
+}
+#Add one to each digit of a number
+#include <stdio.h>
+/* Include other headers as needed */
+int main()
+{
+  int n,sum,p,k,j;
+  scanf("%d",&n);
+  for(int i=1;i<=n;i++){
+    scanf("%d",&j);
+    sum=0;
+    p=0;
+    while(j>0){
+      k=j%10+1;
+      sum=sum+k*pow(10,p);
+      p++;
+      j/=10;
+    }
+    printf("%d\n",sum);
+  }
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+    return 0;
+}
+#prime factors of a number
+void primeFactors(int n){
+  // Write your code here
+  long int i;
+  scanf("%d",&n);
+  for(i=2;1<n;i++){
+    while(n%i==0){
+      printf("%ld\n",i);
+      n=n/i;
+    }
+  }
+}
+#greatest common divisor of two integers
+int gcd(int i, int j){
+  // Write your code here
+  int gcd,a;
+  for(a=1;a<=j;a++){
+    if(i%a==0 && j%a==0){
+      gcd=a;
+    }
+  }
+  return gcd;
+}
+#Square root of a number
+int main()
+{
+  int n;
+  scanf("%d",&n);
+  for(int i=1;i<=n;i++){
+    float num,sr;
+    scanf("%f",&num);
+    sr=sqrt(num);
+    printf("%.2f\n",sr);
+  }
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+    return 0;
+}
+#Binary to decimal conversion
+int binaryToDecimal(char binary[]) {
+  // Write your code here
+  int n=atoi(binary);
+  int sum=0,i=0;
+  while(n>0){
+    int r=n%10;
+    sum=sum+pow(2,i)*r;
+    i++;
+    n=n/10;
+  }
+  return sum;
+}
+#Three Consecutive
+int threeConsecutive(int a, int b, int c){
+  // Write your code here
+  int cou,p=0;
+  if(a<b && a<c){
+    cou=a;
+  }
+  if(b<a && b<c){
+    cou=b;
+  }
+  if(c<a && c<b){
+    cou=c;
+  }
+  if(cou==a || cou==b || cou==c){
+    p++;
+  }
+  cou++;
+  if(cou==a || cou==b || cou==c){
+    p++;
+  }
+  cou++;
+  if(cou==a || cou==b || cou==c){
+    p++;
+  }
+  if(p==3)
+    return 1;
+  else
+    return 0;
+}
+#Factorial using recursion
+int factorial(int n) {
+  // Write your code here
+  int sum=1;
+  for(int i=1;i<=n;i++){
+    sum=sum*i;
+  }
+  return sum;
+}
+#sum of all the digits using recursion
+int sumOfDigits(int n)
+{
+  if(n==0){
+    return 0;
+  }
+  else{
+    return (n%10+ sumOfDigits(n/10));
+  }
+}
+#prime factors using recursion
+#include <stdio.h>
+int main()
+{
+   int no ,i=2;
+   scanf("%d",&no);
+  prime(no,i);
+   return 0;
+}
+void prime(int n ,int i){
+  if(n==0 || n==1)
+    return;
+  if(n%i==0){
+    printf("%d\n",i);
+    prime(n/i,i);
+  }
+  else
+    prime(n,i+1);
+}
+#power (base,exp)
+long power(int base, int exp) {
+  // Write your code here
+  int x=1;
+  if(exp<0){
+    return -1;
+  }
+  for(int i=1;i<=exp;i++){
+    x=x*base;
+  }
+  return x;
+}
+#Form a new number
+int evenDigits(int n)
+{
+ int results;
+  int a=n%10;
+  if(n==0)
+    return 0;
+  else if(a%2==0)
+    results= a+10*evenDigits(n/10);
+  else evenDigits(n/10); 
+}
+#Binary equivalent using recursion
+int decimalToBinary(int n)
+{
+   if (n==1 || n==0){
+     return n;
+   }
+  else{
+    return decimalToBinary(n/2)*10+(n%2);
+  }
+}
+#Greatest common divisor using recursion
+int gcd(int i, int j)
+{
+  if(j==0)
+    return i;
+  else
+    gcd(j,i%j);
+}
+        </textarea>
+        <button onclick="copyCode()">Copy Code</button>
+    </div>
+
+    <script>
+        function copyCode() {
+            var codeBox = document.getElementById("cpp-code");
+            codeBox.select();
+            codeBox.setSelectionRange(0, 99999);
+            document.execCommand("copy");
+            alert("Code copied to clipboard: \n" + codeBox.value);
+        }
+    </script>
+</body>
+
+</html>
